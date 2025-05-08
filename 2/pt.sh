@@ -1,3 +1,5 @@
 #!/bin/bash
-gcc -pthread src/pt.c -o bin/pt -lm
-time bin/pt $1
+scriptDir=$(dirname -- "$(readlink -f -- "$BASH_SOURCE")")
+
+gcc -pthread $scriptDir/src/pt.c -o $scriptDir/bin/pt -lm
+time $scriptDir/bin/pt $1

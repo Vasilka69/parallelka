@@ -18,7 +18,7 @@ sse:
 	movq	-16(%rbp), %rdx
 	movq	-24(%rbp), %rcx
 #APP
-# 6 "src/sse.c" 1
+# 6 "/home/vasili4/projects/parallelka/1/src/sse.c" 1
 	movups (%rax), %xmm0
 movups (%rdx), %xmm1
 mulps %xmm1, %xmm0

@@ -1,3 +1,5 @@
 #!/bin/bash
-gcc src/seq.c -o bin/seq -lm
-time bin/seq $1
+scriptDir=$(dirname -- "$(readlink -f -- "$BASH_SOURCE")")
+
+gcc $scriptDir/src/seq.c -o $scriptDir/bin/seq -lm
+time $scriptDir/bin/seq $1

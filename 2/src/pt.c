@@ -11,10 +11,17 @@ pthread_mutex_t mutex = PTHREAD_MUTEX_INITIALIZER;
 void *heavy_task(void *i) {
     int thread_num = *((int*) i);
 
+    printf("\tThread #%d started\n", thread_num);
+    pthread_mutex_lock(&mutex);
+    printf("\t\tThread #%d acquired mutex\n", thread_num);
+    counter++;
+    printf("\t\t\tThread #%d, counter: %d\n", thread_num, counter);
+    printf("\t\tThread #%d released mutex\n", thread_num);
+    pthread_mutex_unlock(&mutex);
+
     for (int i = 0; i < 1e8; i++) {
         sqrt(i);
     }
-
     printf("\tThread #%d finished\n", thread_num);
     free(i);
 }

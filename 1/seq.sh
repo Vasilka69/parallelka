@@ -1,4 +1,6 @@
 #!/bin/bash
-gcc -S src/seq.c -o assembly/seq.s
-gcc src/seq.c -o bin/seq
-time bin/seq $1a
+scriptDir=$(dirname -- "$(readlink -f -- "$BASH_SOURCE")")
+
+gcc -S $scriptDir/src/seq.c -o $scriptDir/assembly/seq.s
+gcc $scriptDir/src/seq.c -o $scriptDir/bin/seq
+time $scriptDir/bin/seq $1a
