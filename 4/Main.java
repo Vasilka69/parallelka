@@ -13,7 +13,6 @@ public class Main {
     public static Map<String, Integer> hashTable = new Hashtable<>();
     public static Map<String, Integer> syncMap = Collections.synchronizedMap(new HashMap<>());
     public static Map<String, Integer> cHashMap = new ConcurrentHashMap<>();
-    public static Random random = new Random();
 
     public static void main(String[] args) {
 
@@ -58,8 +57,7 @@ public class Main {
                     String threadName = Thread.currentThread().getName();
 
                     for (int j = 0; j < ITERATIONS; j++) {
-                        map.putIfAbsent(key, 0);
-                        map.merge(key, 0, (oldValue, newVal) -> oldValue + 1);
+                        map.merge(key, 1, Integer::sum);
                     }
 
                     return "Thread " + threadName + " done";
