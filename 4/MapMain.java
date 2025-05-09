@@ -1,7 +1,7 @@
 import java.util.*;
 import java.util.concurrent.*;
 
-public class Main {
+public class MapMain {
 
     public static final int THREADS = 50;
     public static final int ITERATIONS = 1000;
