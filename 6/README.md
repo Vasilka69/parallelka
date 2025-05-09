@@ -31,7 +31,7 @@ Hello from user 1
 [User 2]: Hello from user 2
 ```
 
-### Результат работы клиента User 1
+### Результат работы клиента User 2
 ```
 $ java Client.java
 Connected to the chat server!
