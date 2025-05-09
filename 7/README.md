@@ -10,7 +10,7 @@ $ java -cp mappedbus*.jar io.mappedbus.sample.object.ObjectWriter 0
 
 ### Результат работы ObjectWriter 2
 ```
-$ java -cp mappedbus*.jar io.mappedbus.sa
+$ java -cp mappedbus*.jar io.mappedbus.sample.object.ObjectWriter 1
 ```
 
 ### Результат работы ObjectReader
