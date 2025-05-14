@@ -26,3 +26,4 @@ replay_pid*
 .idea/
 out/
 *.iml
+!7/mappedbus-0.5.1.jar
